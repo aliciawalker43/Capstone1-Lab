@@ -25,7 +25,7 @@ public class pigLatinProject {
 		  
 		 String beginLetters= (isConsonants(userInput))+(isVow(userInput));
           
-		 //route word beginning
+		 
 		 
 		 //count amount of letters removed from beginning
 		   for(int i=0; i< beginLetters.length(); i++) {
@@ -34,33 +34,32 @@ public class pigLatinProject {
 			   }
 		   }
 			
-		 //end of user's word
+		 //separate end of user's word
 		   String endOfWord= (userInput.substring(indexBegWord));
 		 
-		 //Print words in PigLatin
+		 //route word- Print words in PigLatin
 		   if(isConsonants(userInput).equals(beginLetters)){
 		       System.out.println(endOfWord + beginLetters +"ay"); //consonants
 		       
 		   } else if (isVow(userInput).equals(beginLetters)) {
 		       System.out.println(userInput + "way");  //Vows */
 		   }
-		   // String finalWord = userInput.substring(beginLetters.length()) + "-" + beginLetters + "ay";
-		   // output.setText(finalWord);
-		    
 		   
-		    //System.out.println(startsWithVow(userInput));
-		  
 		   System.out.println("Would you like to translate another word? (y/n)");
 		    yesNo=scnr.next().startsWith("y");
 	     }
 }
-		 
+	
+	
+	
+	
+		 //Methods for extracting beginning of words
+	     
 		 public static String isVow(String word) {
 			 String initialVows = word.replaceAll("([^bcdfghjklmnpqrstvwxyz]*).*", "$1");
 		   return initialVows; 
 		 }  
        
-		 //finding the consonants in beginning
 		 public static String isConsonants(String word) {
 		 String initialConsonants = word.replaceAll("([^aeiouAEIOU]*).*", "$1");
             return initialConsonants;
@@ -70,22 +69,5 @@ public class pigLatinProject {
 		 
   }
 
-			
-			  
-			    
-		 
-    // if word starts with vowels  
-	/*public static void startsWithVow(String userInput) {
-		if(userInput.startsWith("a")){
-			 System.out.println(userInput+ "way");
-		 }else if(userInput.startsWith("i")) {
-			 System.out.println(userInput+ "way");
-		 }else if(userInput.startsWith("e")) {
-			 System.out.println(userInput+ "way");
-		 }else if(userInput.startsWith("o")) {
-			 System.out.println(userInput+ "way");
-		 }else if(userInput.startsWith("u")) {
-			 System.out.println(userInput+ "way");*? */
-	  
+		    
 	
-  
